@@ -1,25 +1,16 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.3
 
 import PackageDescription
 
 let package = Package(
     name: "Toaster",
     platforms: [
-        .iOS(.v9)
+        .iOS(.v10)
     ],
     products: [
-        .library(
-            name: "Toaster",
-            targets: ["Toaster"]),
+        .library(name: "Toaster", targets: ["Toaster"]),
     ],
     targets: [
-        .target(
-            name: "Toaster",
-            dependencies: [],
-            path: "Sources"),
-        .testTarget(
-            name: "ToasterTests",
-            dependencies: ["Toaster"],
-            path: "ToasterTests"),
+        .target(name: "Toaster", path: "Sources"),
     ]
 )
